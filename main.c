@@ -1,6 +1,7 @@
 #include <ctype.h>
 #include <stdio.h>
 #include <stdlib.h>
+#include <string.h>
 
 #define MAX_IDENT_SIZE 50
 
@@ -128,6 +129,21 @@ int read_tokens(token *list) {
   }
   c = 0;
   return i;
+}
+
+ast *make_ast(ast_op op, ast *left, ast *middle, ast *right, double value,
+              char *ident) {
+  ast *ast = malloc(sizeof(ast));
+  ast->op = op;
+  ast->left = left;
+  ast->right = right;
+  ast->middle = middle;
+  if (op == O_INTLIT) {
+    ast->value = value;
+  } else if (op == O_VAR) {
+    strcpy(ast->ident, ident);
+  }
+  return ast;
 }
 
 int main(int argc, char **argv) {
