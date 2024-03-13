@@ -21,13 +21,26 @@ typedef enum {
   T_RBRAC
 } tokentype;
 
+typedef enum { O_ADD, O_SUB, O_MUL, O_DIV, O_INTLIT, O_VAR, O_NEGATE } ast_op;
+
 typedef struct {
   tokentype type;
   union {
     int int_value;
-    char ident[50];
+    char ident[MAX_IDENT_SIZE];
   };
 } token;
+
+typedef struct ast {
+  ast_op op;
+  struct ast *left;
+  struct ast *middle;
+  struct ast *right;
+  union {
+    double value;
+    char ident[MAX_IDENT_SIZE];
+  };
+} ast;
 
 char *input;
 FILE *input_file;
