@@ -1,4 +1,5 @@
 #include <ctype.h>
+#include <i386/types.h>
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
@@ -131,8 +132,8 @@ int read_tokens(token *list) {
   return i;
 }
 
-ast *make_ast(ast_op op, ast *left, ast *middle, ast *right, double value,
-              char *ident) {
+ast *make_ast_ternary(ast_op op, ast *left, ast *middle, ast *right,
+                      double value, char *ident) {
   ast *ast = malloc(sizeof(ast));
   ast->op = op;
   ast->left = left;
@@ -145,6 +146,24 @@ ast *make_ast(ast_op op, ast *left, ast *middle, ast *right, double value,
   }
   return ast;
 }
+
+ast *make_ast(ast_op op, ast *left, ast *right, double value, char *ident) {
+  return make_ast_ternary(op, left, NULL, right, value, ident);
+}
+
+ast *make_ast_unary(ast_op op, ast *left, double value, char *ident) {
+  return make_ast(op, left, NULL, value, ident);
+}
+
+ast *make_ast_number(double number) {
+  return make_ast_unary(O_INTLIT, NULL, number, NULL);
+}
+
+ast *make_ast_var(char *ident) { return make_ast_unary(O_VAR, NULL, 0, ident); }
+
+void statement() {}
+
+void interpret() {}
 
 int main(int argc, char **argv) {
   if (argc < 2)
