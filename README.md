@@ -3,6 +3,7 @@ Un language de programmation interpreté à syntaxe flexible que j'ai créé pou
 
 ## Syntaxe
 ### Code
+`syntaxe.ariel`
 ```c
 {
   print "Ceci est un programme d'exemple", newline;
