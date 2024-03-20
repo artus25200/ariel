@@ -14,6 +14,8 @@ Un language de programmation interpreté à syntaxe flexible que j'ai créé pou
   };
   print "- Vous pouvez faire des calculs de math : ", 3 * 4 + 19 / 7 * (1 + 3), newline;
   print "- Vous pouvez" + " additionner et " + "multiplier "*3 + "des chaines de caracteres" + newline;
+  // vous pouvez également écrire des commentaires
+  // print newline; est équivalent à print nl; et aussi à print "\n";
 };
 ```
 ### Résultat
