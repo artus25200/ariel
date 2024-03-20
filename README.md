@@ -8,7 +8,10 @@ Un language de programmation interpreté à syntaxe flexible que j'ai créé pou
   print "Ceci est un programme d'exemple", newline;
   print "Ce language a une syntaxe flexible :", newline;
   print("- Vous pouvez mettre ou ne pas mettre de parentheses", newline);
-  { print "- Vous pouvez créer des blocs de code comme ceci", newline; };
+  {
+    print "- Vous pouvez créer des blocs de code comme ceci";
+    print newline;
+  };
   print "- Vous pouvez faire des calculs de math : ", 3 * 4 + 19 / 7 * (1 + 3),
       newline;
   print "- Vous pouvez" + " additionner et " + "multiplier "*3 +
