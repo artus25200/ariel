@@ -12,10 +12,8 @@ Un language de programmation interpreté à syntaxe flexible que j'ai créé pou
     print "- Vous pouvez créer des blocs de code comme ceci";
     print newline;
   };
-  print "- Vous pouvez faire des calculs de math : ", 3 * 4 + 19 / 7 * (1 + 3),
-      newline;
-  print "- Vous pouvez" + " additionner et " + "multiplier "*3 +
-      "des chaines de caracteres" + newline;
+  print "- Vous pouvez faire des calculs de math : ", 3 * 4 + 19 / 7 * (1 + 3), newline;
+  print "- Vous pouvez" + " additionner et " + "multiplier "*3 + "des chaines de caracteres" + newline;
 };
 ```
 ### Résultat
