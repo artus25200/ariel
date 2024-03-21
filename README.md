@@ -29,3 +29,11 @@ Ce language a une syntaxe flexible :
 - Vous pouvez faire des calculs de math : 22.8571
 - Vous pouvez additionner et multiplier multiplier multiplier des chaines de caracteres
 ```
+
+## TODO
+- variables
+- fonctions
+- boucles
+- fonctions standards (recevoir des données de l'utilisateur, ouvrir des fichiers, convertir des types de données, ...)
+- arguments de programme (./cariel programme.ariel arg1 args2 ...)
+- compiler les programmes
