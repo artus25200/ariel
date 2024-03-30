@@ -35,5 +35,5 @@ Ce language a une syntaxe flexible :
 - fonctions
 - boucles
 - fonctions standards (recevoir des données de l'utilisateur, ouvrir des fichiers, convertir des types de données, ...)
-- arguments de programme (./cariel programme.ariel arg1 args2 ...)
-- compiler les programmes
+- arguments de programme (./cariel programme.ariel arg1 arg2 ...)
+- compilation de programmes
